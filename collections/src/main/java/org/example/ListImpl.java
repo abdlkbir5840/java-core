@@ -2,14 +2,13 @@ package org.example;
 
 import java.util.*;
 
-public class App1 {
+public class ListImpl {
     //Write a Java program to search for an element in an array list.
     public static <T> T search(List<T> list, String element) throws Exception {
-        T existing = list.stream()
+        return list.stream()
                 .filter(item -> item.toString().toLowerCase().startsWith(element.toLowerCase()))
                 .findFirst()
                 .orElseThrow(() -> new Exception(String.format("Element '%s' not found", element)));
-        return existing;
     }
 
     //Write a Java program to sort a given array list.
@@ -132,7 +131,6 @@ public class App1 {
         System.out.println();
 //7. Write a Java program to search for an element in an array list.
         System.out.println("6: Write a Java program to search for an element in an array list. {search : whi}");
-        String searchElement = "whi";
         try {
             String result = search(colors, "whi");
             System.out.println("Founded element: "+result);
