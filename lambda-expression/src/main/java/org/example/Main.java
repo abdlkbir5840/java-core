@@ -195,6 +195,6 @@ public class Main {
         System.out.println(colors);
         System.out.println(String.format("longest: %s", longest));
         System.out.println(String.format("smallest: %s", smallest));
-        
+
     }
 }
